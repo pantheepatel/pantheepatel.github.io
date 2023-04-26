@@ -1,0 +1,37 @@
+:root {
+    --head-font: 'Montserrat';
+    --normal-font:'Nunito';
+}
+
+.head-font{
+    font-family: var(--head-font);
+}
+
+.normal-font{
+    font-family: var(--normal-font);
+}
+
+.name-div{
+    font-family: var(--head-font);
+    font-weight: 200;
+    font-size: 7em;
+    transition: 3s;
+}
+
+.title-div{
+    font-family: var(--normal-font);
+    font-weight: 600;
+    font-size: 3em;
+    transition: 3s;
+}
+
+.main-image {
+    /* max-height: calc(100% - 1rem);
+    max-width: calc(100% - 1rem); */
+    height: 100vh;
+    margin: 2%;
+    margin-left: 0;
+    /* width: max-content; */
+    transform:scale(0.8);
+    transition: 4s;
+}
