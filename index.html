@@ -66,7 +66,16 @@
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#skills" class="nav-link scrollto"><i class="bi bi-magic"></i> <span>Skills</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li class="row" style="display: flex; width: 100%; ">
+            <a href="#resume" class="nav-link scrollto col-8">
+              <i class="bx bx-file-blank"></i>
+              <span>Resume</span>
+            </a>
+            <div class="col-4 row" style="display: flex;align-self: flex-end;">
+              <a class="col-6" href="/assets/docs/PantheePatel.pdf" download="PantheePatel"><i class="bx bx-download bx-sm"></i></a>
+              <a class="col-6" href="/assets/docs/PantheePatel.pdf"><i class="bi bi-eye-fill"></i></a>
+            </div>
+          </li>
           <!-- <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
               <span>Portfolio</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
@@ -77,7 +86,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <section id="hero" class="d-flex flex-column justify-content-center p-3 align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Panthee Patel</h1>
       <p>I'm <span class="typed" data-typed-items="Website Developer, Freelancer, Student"></span>
@@ -374,7 +383,14 @@
             </div> -->
           </div>
         </div>
-
+        <div class="row align-content-center" data-aos="fade-up">
+          <button class="btn resume-btn justify-content-center" style="width:100%; display: flex;">
+            <i class="bx bx-download bx-sm"></i>
+            <a href="/assets/docs/PantheePatel.pdf" download="PantheePatel">
+              Download
+            </a>
+          </button>
+        </div>
         <!-- TODO: add button to download the resume -->
 
       </div>
