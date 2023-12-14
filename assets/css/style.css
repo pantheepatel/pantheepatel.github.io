@@ -90,7 +90,7 @@ h6 {
   width: 140px;
   border: 8px solid #2c2f3f;
   border-radius: 50%;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 #header .profile h1 {
@@ -246,7 +246,7 @@ h6 {
   height: 100vh;
   /* background: url("../img/hero-bg.jpg") top center; */
   /* background-image: radial-gradient('radial',#000000,#853535); */
-  background: linear-gradient(45deg,black);
+  background: linear-gradient(45deg, black, #149ddd);
   background-size: cover;
 }
 
@@ -532,25 +532,25 @@ section {
   border: 2px solid #1f5297;
 }
 
-.resume .resume-btn{
+.resume .resume-btn {
   color: #1f5297;
   border: 3px #1f5297 solid;
 }
 
-.resume-btn:hover{
+.resume-btn:hover {
   background-color: #1f5297;
   color: #f4f6fd;
 }
 
-.resume .resume-btn a{
+.resume .resume-btn a {
   color: #1f5297;
   padding-left: 0.5rem;
   font-weight: bold;
 }
 
-.resume-btn:hover a{
+.resume-btn:hover a {
   color: #f4f6fd;
- }
+}
 
 /*--------------------------------------------------------------
 # Portfolio
