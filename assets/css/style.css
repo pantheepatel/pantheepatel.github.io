@@ -246,7 +246,7 @@ h6 {
   height: 100vh;
   /* background: url("../img/hero-bg.jpg") top center; */
   /* background-image: radial-gradient('radial',#000000,#853535); */
-  background: linear-gradient(45deg,black,#149ddd);
+  background: linear-gradient(45deg,black);
   background-size: cover;
 }
 
