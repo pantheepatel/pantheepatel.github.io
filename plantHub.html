@@ -15,8 +15,8 @@
   <meta name="author" content="Panthee Patel">
 
   <!-- Favicons -->
-  <link href="assets/image/logo-p-2.png" rel="icon">
-  <link href="assets/image/logo-p-2.png" rel="apple-touch-icon">
+  <link href="../assets/image/logo-p-2.png" rel="icon">
+  <link href="../assets/image/logo-p-2.png" rel="apple-touch-icon">
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -24,10 +24,10 @@
     </script>
   <script>
     $(function () {
-      $("#HeaderLinks").load("HeaderLinks.html");
-      $("#FooterLinks").load("FooterLinks.html");
-      $("#header").load("header.html");
-      $("#footer").load("footer.html");
+      $("#HeaderLinks").load("../HeaderLinks.html");
+      $("#FooterLinks").load("../FooterLinks.html");
+      $("#header").load("../header.html");
+      $("#footer").load("../footer.html");
     });
   </script>
 
@@ -45,10 +45,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfoio Details</h2>
+          <h2>Project Details</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Portfoio Details</li>
+            <li>Project Details</li>
           </ol>
         </div>
 
@@ -61,38 +61,33 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-8">
+          <div class="col-12">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                  <img src="assets/project_images/web_p1/plantHub-1.png" alt="plantHub-1">
                 </div>
-
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                  <img src="assets/project_images/web_p1/plantHub-2.png" alt="plantHub-2">
                 </div>
-
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                  <img src="assets/project_images/web_p1/plantHub-3.png" alt="plantHub-3">
                 </div>
-
               </div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
+          <div class="col-12 d-flex gap-5">
+            <div class="portfolio-info col-6 bg-blue">
               <h3>Project information</h3>
               <ul>
                 <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
                 <li><strong>Project date</strong>: 01 March, 2020</li>
                 <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
               </ul>
             </div>
-            <div class="portfolio-description">
+            <div class="portfolio-description col-6">
               <h2>This is an example of portfolio detail</h2>
               <p>
                 Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia.

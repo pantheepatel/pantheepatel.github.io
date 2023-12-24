@@ -653,6 +653,13 @@ section {
   bottom: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .portfolio .portfolio-wrap .portfolio-links {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
