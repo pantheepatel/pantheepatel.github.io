@@ -303,3 +303,46 @@
 #modalDescription {
   margin-top: 1rem;
 }
+
+.noColor {
+  text-decoration: none;
+  color: black;
+}
+
+.noColor:hover {
+  color: #1072a1;
+}
+
+.skill-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  /* box-shadow: 8px 4px 4px 2px #1072a1; */
+  background-color: #1073a198;
+  transition: 0.5s;
+}
+
+.skill-card img {
+  width: 100%;
+  height: auto;
+}
+
+.skill-name {
+  padding: 10px;
+  background-color: #545454;
+  text-align: center;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  /* visibility: hidden; */
+}
+
+.imgClass {
+  height: 100px;
+}

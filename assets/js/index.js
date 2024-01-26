@@ -11,10 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
             name: 'PlantHub',
             image: 'assets/project_images/web_p1/plantHub-1.png',
             description: 'PlantHub is a comprehensive platform designed for plant enthusiasts, offering a wealth of information about various plants and trees. Built with a user-centric approach, PlantHub aims to educate, engage, and inspire individuals interested in plants and nature.',
-            gitHubLink:'https://github.com/pantheepatel/PlantHub.github.io',
+            gitHubLink: 'https://github.com/pantheepatel/PlantHub.github.io',
             features: ['Searching', 'Filtering', 'Like-Unlike', 'Pagination', 'login-logout'],
             skills: ['React JS', 'Tailwind CSS', 'DJango'],
-            type: 'web'
+            type: 'web',
+            images: ['assets/project_images/web_p1/plantHub-1.png', 'assets/project_images/web_p1/plantHub-2.png', 'assets/project_images/web_p1/plantHub-3.png',]
         },
         // {
         //     name: 'PlantHub',
@@ -57,6 +58,24 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('modalDescription').textContent = selectedProject.description;
             document.getElementById('gitHubLink').href = selectedProject.gitHubLink;
             document.getElementById('gitHubLink').innerText = selectedProject.gitHubLink;
+
+            // // Populate image slider
+            // const carouselInner = document.getElementById('carouselInner');
+            // carouselInner.innerHTML = '';
+            // selectedProject.images.forEach((image, index) => {
+            //     const itemClass = index === 0 ? 'carousel-item active' : 'carousel-item';
+            //     const carouselItem = document.createElement('div');
+            //     carouselItem.classList = itemClass;
+
+            //     const imageElement = document.createElement('img');
+            //     imageElement.src = image;
+            //     imageElement.alt = `${selectedProject.name} Image ${index + 1}`;
+            //     imageElement.classList = 'd-block w-100';
+
+            //     carouselItem.appendChild(imageElement);
+            //     carouselInner.appendChild(carouselItem);
+            // });
+            // $('#projectCarousel').carousel();
 
             // Populate features
             const featuresList = document.getElementById('projectFeatures');
@@ -107,4 +126,76 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+});
+// // Skills array
+// const skills = ['AngularJS', 'ReactJS', 'C', 'CSS', 'Bootstrap', 'Java'];
+
+// // Function to generate skills
+// function generateSkills() { 
+//     console.log('called con')
+//     const skillsContainer = document.getElementById('skillsContainer');
+
+//     skills.forEach(skill => {
+//         // Create a new column for each skill
+//         const col = document.createElement('div');
+//         col.classList.add('col-3'); // Bootstrap column class
+
+//         // Create image element
+//         const img = document.createElement('img');
+//         img.src = `assets/image/${skill}.png`; // Set image source dynamically
+//         img.alt = skill; // Set alt text dynamically
+//         img.classList.add('imgClass')
+
+//         // Append image to column and column to container
+//         col.appendChild(img);
+//         skillsContainer.appendChild(col);
+//     });
+// }
+
+// // Call the function to generate skills
+// generateSkills();
+document.addEventListener('DOMContentLoaded', function () {
+    imagePath = "assets/image/"
+    // Array of skill objects
+    const skills = [
+        { image: 'HTML', name: 'HTML' },
+        { image: 'CSS', name: 'CSS' },
+        { image: 'JS', name: 'Java Script' },
+        { image: 'Bootstrap', name: 'Bootstrap' },
+        { image: 'TailwindCSS', name: 'Tailwind CSS' },
+        { image: 'AngularJS', name: 'Angular JS' },
+        { image: 'ReactJS', name: 'React JS' },
+        { image: 'ReactNative', name: 'React Native' },
+        { image: 'Python', name: 'Python' },
+        { image: 'Django', name: 'Django' },
+    ];
+
+    // Get the container to append skills
+    const skillsContainer = document.getElementById('skillsContainer');
+
+    // Function to generate skill cards
+    function generateSkillCards() {
+        skills.forEach(skill => {
+            // Create card div
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('col-sm-4', 'col-md-3', 'mb-4'); // Bootstrap column and margin
+
+            // Create skill card content
+            const cardContent = `
+                <div class="skill-card">
+                    <img src="${imagePath}${skill.image}.png" alt="${skill.name}">
+                    <div class="skill-name">${skill.name}</div>
+                </div>
+            `;
+
+            // Set innerHTML of cardDiv
+            cardDiv.innerHTML = cardContent;
+
+            // Append cardDiv to skillsContainer
+            skillsContainer.appendChild(cardDiv);
+        });
+    }
+
+    // Generate skill cards
+    generateSkillCards();
 });
