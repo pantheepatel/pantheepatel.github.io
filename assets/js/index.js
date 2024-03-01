@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { image: 'ReactJS', name: 'React JS' },
         { image: 'ReactNative', name: 'React Native' },
         { image: 'Python', name: 'Python' },
-        { image: 'Django', name: 'Django' },
+        { image: 'Jango', name: 'Django' },
     ];
 
     // Get the container to append skills
