@@ -699,39 +699,37 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" class="contact">
-            <form action="" class="php-email-form" method="post" role="form"
-              onsubmit="sendEmail(); reset(); return false">
+            <form action="" class="php-email-form" method="post" role="form">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                  <label for="fullName">Your Name</label>
+                  <input type="text" name="fullName" class="form-control" id="fullName" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="email">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="name">Subject</label>
+                  <label for="subject">Subject</label>
                   <input type="text" class="form-control" name="subject" id="subject" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Mobile Number</label>
+                  <label for="mobile">Mobile Number</label>
                   <input type="text" class="form-control" name="mobile" id="mobile" required>
                 </div>
               </div>
-
               <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
               </div>
               <!-- <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div> -->
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" id="sendMSg">Send Message</button></div>
             </form>
           </div>
 
@@ -753,24 +751,33 @@
   <!-- End  Footer -->
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <!-- <script>
-    function sendEmail() {
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "pantheepatel18@gmail.com",
-        password: "",
-        To: "patel.panthee.18@gmail.com",
-        From: document.getElementById("email").value,
-        Subject: document.getElementById("subject").value,
-        Body: "Name:" + document.getElementById("name").value + "<br/> Message:" + document.getElementById("message").value
-      }).then(
-        document.getElementsByClassName("sent-message")
-      )
-    }
-  </script> -->
 
   <div id="FooterLinks"></div>
   <script src="assets/js/index.js"></script>
+
+  <script>
+    var send = document.getElementById('sendMSg');
+    send.addEventListener('click', function (e) {
+      e.preventDefault()
+      console.log('hii')
+      var fullName = document.getElementById('fullName').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var mobile = document.getElementById('mobile').value;
+      var message = document.getElementById('message').value;
+      var body = 'Name : ' + fullName + '<br/>' + 'Mobile number : ' + mobile + '<br/>' + 'Message : ' + message
+      console.log('email ', email, ' subject : ', subject, ' body : ', body)
+      Email.send({
+        SecureToken: "e6f7e1b5-594f-449b-b6f2-0dcd2af84db9",
+        To: 'patel.panthee.18@gmail.com',
+        From: email,
+        Subject: subject,
+        Body: body
+      }).then(
+        message => alert('Email Sent Successfully!')
+      );
+    })
+  </script>
 
 </body>
 

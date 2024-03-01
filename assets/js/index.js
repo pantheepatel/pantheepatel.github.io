@@ -199,3 +199,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Generate skill cards
     generateSkillCards();
 });
+
