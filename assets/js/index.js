@@ -16,16 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             skills: ['React JS', 'Tailwind CSS', 'DJango'],
             type: 'web',
             images: ['assets/project_images/web_p1/plantHub-1.png', 'assets/project_images/web_p1/plantHub-2.png', 'assets/project_images/web_p1/plantHub-3.png',]
-        },
-        // {
-        //     name: 'PlantHub',
-        //     image: 'assets/project_images/web_p1/plantHub-1.png',
-        //     description: 'PlantHub is a comprehensive platform designed for plant enthusiasts, offering a wealth of information about various plants and trees. Built with a user-centric approach, PlantHub aims to educate, engage, and inspire individuals interested in plants and nature.',
-        //     features: ['Searching', 'Filtering', 'Like-Unlike', 'Pagination', 'login-logout'],
-        //     skills: ['React JS', 'Tailwind CSS', 'DJango'],
-        //     type: 'app'
-        // },
-        // Add more projects similarly
+        }
     ];
 
     // Function to generate project cards
@@ -49,33 +40,59 @@ document.addEventListener('DOMContentLoaded', function () {
     const projectCards = document.querySelectorAll('.card');
     projectCards.forEach(card => {
         card.addEventListener('click', function () {
+            const slideNo = 0;
             const projectType = this.getAttribute('data-category');
             const selectedProject = projects.find(project => project.type === projectType);
 
             // Populate modal content
             document.querySelector('.modal-title').textContent = selectedProject.name;
-            document.getElementById('modalImage').src = selectedProject.image;
+            // document.getElementById('modalImage').src = selectedProject.image;
             document.getElementById('modalDescription').textContent = selectedProject.description;
             document.getElementById('gitHubLink').href = selectedProject.gitHubLink;
             document.getElementById('gitHubLink').innerText = selectedProject.gitHubLink;
 
-            // // Populate image slider
-            // const carouselInner = document.getElementById('carouselInner');
-            // carouselInner.innerHTML = '';
-            // selectedProject.images.forEach((image, index) => {
-            //     const itemClass = index === 0 ? 'carousel-item active' : 'carousel-item';
-            //     const carouselItem = document.createElement('div');
-            //     carouselItem.classList = itemClass;
+            const carouselInner = document.getElementById('carouselInner');
+            const prevBtn = document.getElementById('carouselControlPrev').addEventListener('click', function () {
+                $('#projectCarousel').carousel('prev');
+                // console.log("prev");
+                if (this.slideNo > 0) {
+                    slideNo = slideNo - 1;
+                } else {
+                    slideNo = selectedProject.images.length - 1;
+                }
+            });
+            const nextBtn = document.getElementById('carouselControlNext').addEventListener('click', function () {
+                $('#projectCarousel').carousel('next');
+                // console.log("next");
+                if (slideNo < selectedProject.images.length - 1) {
+                    slideNo = slideNo + 1;
+                } else {
+                    slideNo = 0;
+                }
+            });
 
-            //     const imageElement = document.createElement('img');
-            //     imageElement.src = image;
-            //     imageElement.alt = `${selectedProject.name} Image ${index + 1}`;
-            //     imageElement.classList = 'd-block w-100';
+            carouselInner.innerHTML = '';
+            selectedProject.images.forEach((image, index) => {
+                if (index === slideNo) {
+                    itemClass = 'carousel-item active';
+                    // console.log("active :", index, slideNo);
+                } else {
+                    itemClass = 'carousel-item';
+                    // console.log("not active :", index, slideNo);
+                }
+                // const itemClass = index === 0 ? 'carousel-item active' : 'carousel-item';
+                const carouselItem = document.createElement('div');
+                carouselItem.classList = itemClass;
 
-            //     carouselItem.appendChild(imageElement);
-            //     carouselInner.appendChild(carouselItem);
-            // });
-            // $('#projectCarousel').carousel();
+                const imageElement = document.createElement('img');
+                imageElement.src = image;
+                imageElement.alt = `${selectedProject.name} Image ${index + 1}`;
+                imageElement.classList = 'd-block w-100 bg-success';
+
+                carouselItem.appendChild(imageElement);
+                carouselInner.appendChild(carouselItem);
+            });
+            $('#projectCarousel').carousel();
 
             // Populate features
             const featuresList = document.getElementById('projectFeatures');
@@ -102,8 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
-
     // Event listener for the close button within the modal
     $('.close-btn').on('click', function () {
         $('#projectModal').modal('hide');
@@ -127,33 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-// // Skills array
-// const skills = ['AngularJS', 'ReactJS', 'C', 'CSS', 'Bootstrap', 'Java'];
 
-// // Function to generate skills
-// function generateSkills() { 
-//     console.log('called con')
-//     const skillsContainer = document.getElementById('skillsContainer');
-
-//     skills.forEach(skill => {
-//         // Create a new column for each skill
-//         const col = document.createElement('div');
-//         col.classList.add('col-3'); // Bootstrap column class
-
-//         // Create image element
-//         const img = document.createElement('img');
-//         img.src = `assets/image/${skill}.png`; // Set image source dynamically
-//         img.alt = skill; // Set alt text dynamically
-//         img.classList.add('imgClass')
-
-//         // Append image to column and column to container
-//         col.appendChild(img);
-//         skillsContainer.appendChild(col);
-//     });
-// }
-
-// // Call the function to generate skills
-// generateSkills();
 document.addEventListener('DOMContentLoaded', function () {
     imagePath = "assets/image/"
     // Array of skill objects

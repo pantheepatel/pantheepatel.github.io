@@ -33,13 +33,13 @@
   <div id="HeaderLinks"></div>
 </head>
 
-<body data-aos-delay="1">
+<body>
 
   <div id="header"></div>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center p-3 align-items-center">
-    <div class="hero-container" data-aos="fade-in">
+    <div class="hero-container">
       <h1>Panthee Patel</h1>
       <p>I'm a <span class="typed" data-typed-items="Website Developer, Freelancer, Student"></span>
         <br>
@@ -496,7 +496,20 @@
             </button>
           </div>
           <div class="modal-body">
-            <img src="" alt="Project Image" id="modalImage" class="img-fluid">
+            <!-- <img src="" alt="Project Image" id="modalImage" class="img-fluid"> -->
+            <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+              <div id="carouselInner" class="carousel-inner"></div>
+              <a class="carousel-btn carousel-control-prev" id="carouselControlPrev" href="#projectCarousel"
+                role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon carousel-icon" aria-hidden="true"></span>
+                <!-- <span class="sr-only text-danger ">Previous</span> -->
+              </a>
+              <a class="carousel-btn carousel-control-next" id="carouselControlNext" href="#projectCarousel"
+                role="button" data-slide="next">
+                <span class="carousel-control-next-icon carousel-icon" aria-hidden="true"></span>
+                <!-- <span class="sr-only text-danger ">Next</span> -->
+              </a>
+            </div>
             <p id="modalDescription"></p>
             <h6>Features:</h6>
             <ul id="projectFeatures"></ul>
@@ -682,13 +695,19 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>patel.panthee.18&#64;gmail.com</p>
+                <p>
+                  <a href="mailto:patel.panthee.18@gmail.com" class="noColor">patel.panthee.18&#64;gmail.com</a>
+                </p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+91 75758 60820</p>
+                <p>
+                  <a href="tel:+917575860820" class="noColor">
+                    +91 75758 60820
+                  </a>
+                </p>
               </div>
 
               <!-- <iframe
@@ -768,8 +787,8 @@
       var body = 'Name : ' + fullName + '<br/>' + 'Mobile number : ' + mobile + '<br/>' + 'Message : ' + message
       console.log('email ', email, ' subject : ', subject, ' body : ', body)
       Email.send({
-        SecureToken: "e6f7e1b5-594f-449b-b6f2-0dcd2af84db9",
-        To: 'patel.panthee.18@gmail.com',
+        SecureToken: "1098a42e-b9e4-43a1-90f4-04461e5c2eb4",
+        To: "patel.panthee.18@gmail.com",
         From: email,
         Subject: subject,
         Body: body
