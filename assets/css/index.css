@@ -202,7 +202,8 @@
 
 .filter-btn {
   align-items: center;
-  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  /* background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB); */
+  background: #149ddd;
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -335,12 +336,16 @@
 
 .skill-name {
   padding: 10px;
-  background-color: #545454;
   text-align: center;
+  background-color: #1073a198;
   color: white;
   font-size: large;
   font-weight: bold;
   /* visibility: hidden; */
+}
+
+.skill-card:hover .skill-name {
+  background-color: #545454;
 }
 
 .imgClass {
@@ -403,7 +408,8 @@
   background-color: #1073a1;
   border-radius: 50%;
 }
-.subBtn{
+
+.subBtn {
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
@@ -411,6 +417,7 @@
   transition: 0.4s;
   border-radius: 4px;
 }
-.subBtn:hover{
+
+.subBtn:hover {
   background: #37b3ed;
 }

@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
         skills.forEach(skill => {
             // Create card div
             const cardDiv = document.createElement('div');
-            cardDiv.classList.add('col-sm-4', 'col-md-3', 'mb-4'); // Bootstrap column and margin
+            cardDiv.classList.add('col-6', 'col-sm-4', 'col-md-3', 'mb-4'); // Bootstrap column and margin
 
             // Create skill card content
             const cardContent = `
