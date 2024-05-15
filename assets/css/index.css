@@ -403,3 +403,14 @@
   background-color: #1073a1;
   border-radius: 50%;
 }
+.subBtn{
+  background: #149ddd;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+.subBtn:hover{
+  background: #37b3ed;
+}

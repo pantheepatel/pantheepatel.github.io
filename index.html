@@ -218,8 +218,10 @@
     <!-- </div> -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg container ">
-      <div class="row" id="skillsContainer">
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+        <div class="row" id="skillsContainer">
+        </div>
       </div>
     </section>
     <!-- <section id="skills" class="skills section-bg">
@@ -683,7 +685,6 @@
         </div>
 
         <div class="row" data-aos="fade-in">
-
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
@@ -717,38 +718,37 @@
 
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" class="contact">
-            <form action="" class="php-email-form" method="post" role="form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="fullName">Your Name</label>
-                  <input type="text" name="fullName" class="form-control" id="fullName" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="email">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="subject">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="mobile">Mobile Number</label>
-                  <input type="text" class="form-control" name="mobile" id="mobile" required>
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch row" class="contact">
+            <!-- <form action="https://formsubmit.co/patel.panthee.18@gmail.com" method="POST">
+              <input type="text" name="name1" required>
+              <input type="email" name="email1" required>
+              <button type="submit">Send</button>
+            </form> -->
+            <form target="_blank" action="https://formsubmit.co/patel.panthee.18@gmail.com" method="POST">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-12 col-md-6 my-1">
+                    <input type="text" name="name" class="form-control p-3" placeholder="Full Name" required>
+                  </div>
+                  <div class="col-12 col-md-6 my-1">
+                    <input type="email" name="email" class="form-control p-3" placeholder="Email Address" required>
+                  </div>
                 </div>
               </div>
               <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+                <div class="row">
+                  <div class="col-12 col-md-6 my-1">
+                    <input type="text" name="subject" class="form-control p-3" placeholder="Subject" required>
+                  </div>
+                  <div class="col-12 col-md-6 my-1">
+                    <input type="number" name="mobile" class="form-control p-3" placeholder="Mobile Number" required>
+                  </div>
+                </div>
               </div>
-              <!-- <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div> -->
-              <div class="text-center"><button type="submit" id="sendMSg">Send Message</button></div>
+              <div class="form-group my-2">
+                <textarea placeholder="Your Message" class="form-control p-3" name="message" rows="10" required></textarea>
+              </div>
+              <button type="submit" class="btn-block subBtn">Submit Form</button>
             </form>
           </div>
 
