@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', function () {
             skills: ['React JS', 'Tailwind CSS', 'DJango'],
             type: 'web',
             images: ['assets/project_images/web_p1/plantHub-1.png', 'assets/project_images/web_p1/plantHub-2.png', 'assets/project_images/web_p1/plantHub-3.png',]
+        },
+        {
+            name: 'TriviaTrek',
+            image: 'assets/project_images/java_p1/TriviaTrek_1.png',
+            description: ' Through this project, I delved into fundamental Java concepts, including object-oriented programming, file handling, and user authentication. As I developed TriviaTrek, I learned the importance of efficient data management and user interaction in creating engaging applications.',
+            gitHubLink: 'https://github.com/pantheepatel/TriviaTrek',
+            features: ['Registration', 'Login', 'Quiz', 'Highscore Updation'],
+            skills: ['JAVA'],
+            type: 'java',
+            images: ['assets/project_images/java_p1/TriviaTrek_1.png', 'assets/project_images/java_p1/TriviaTrek_2.png', 'assets/project_images/java_p1/TriviaTrek_3.png',]
         }
     ];
 
@@ -24,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let html = '';
         projects.forEach(project => {
             html += `
-            <div class="col-md-4 card" data-category="${project.type}">
+            <div class="col-md-4 card d-flex justify-content-center " data-category="${project.type}">
                 <img src="${project.image}" alt="${project.name}" class="project-image" data-description="${project.description}">
             </div>
             `;
@@ -167,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
         skills.forEach(skill => {
             // Create card div
             const cardDiv = document.createElement('div');
-            cardDiv.classList.add('col-6', 'col-sm-4', 'col-md-3', 'mb-4'); // Bootstrap column and margin
+            cardDiv.classList.add('col-6', 'col-sm-4', 'col-md-3', 'col-lg-2', 'mb-4'); // Bootstrap column and margin
 
             // Create skill card content
             const cardContent = `

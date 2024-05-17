@@ -41,7 +41,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center p-3 align-items-center">
     <div class="hero-container">
       <h1>Panthee Patel</h1>
-      <p>I'm a <span class="typed" data-typed-items="Website Developer, Freelancer, Student"></span>
+      <p style="line-height: 1.7;">I'm a <span class="typed" data-typed-items="Website Developer, Freelancer, Student"></span>
         <br>
         <span class="">Innovating the world with code.</span>
       </p>
@@ -52,7 +52,7 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about section-bg">
       <div class="container">
 
         <div class="section-title">
@@ -218,7 +218,7 @@
     <!-- </div> -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
+    <section id="skills" class="skills">
       <div class="container">
         <div class="row" id="skillsContainer">
         </div>
@@ -315,7 +315,7 @@
     <!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    <section id="resume" class="resume section-bg">
       <div class="container">
 
         <div class="section-title">
@@ -347,7 +347,7 @@
               <h4>Bachelor of Computer Engineering</h4>
               <h5>2021 - 2025</h5>
               <!-- TODO: add the link of college -->
-              <p><em>LJ University, Ahmedabad, Gujarat</em></p>
+              <p><em><a href="https://www.ljku.edu.in/">LJ University</a>, Ahmedabad, Gujarat</em></p>
               <!-- TODO: change this para -->
               <ul>
                 <li>Throughout my college journey, I have had the opportunity to develop a strong foundation in
@@ -371,19 +371,19 @@
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
               <h4>Web Developer Intern</h4>
-              <h5>September 2022 - Present</h5>
+              <h5>September 2022 - February 2024</h5>
               <!-- TODO: add the link of location or website -->
-              <p><em>Humbee Studios, Ahmedabad, India </em></p>
+              <p><em><a href="https://www.humbeestudio.com/">Humbee Studios</a>, Ahmedabad, India </em></p>
               <!-- TODO: change this section according to resume -->
               <h6>Project I have done in this organization</h6>
               <ul>
 
                 <li>
-                  <a href="https://connect.researchconnect.co/">Research Connect</a>
+                  <a target="_blank" href="https://connect.researchconnect.co/">Research Connect</a>
                   <span> - to collaborate on medical research projects</span>
                 </li>
                 <li>
-                  <a href="http://pvotdesigns.xyz/shankus.com/">Shankus Club</a>
+                  <a>Shankus Club</a>
                   <span> - SClub that offers all-inclusive leisure and entertainment and diverse range of
                     amenities</span>
                 </li>
@@ -467,18 +467,24 @@
     </section> -->
     <section id="portfolio">
       <div class="container">
-        <div class="filter">
-          <button class="filter-btn active" data-filter="all">
+        <!-- <div class="filter">
+          <button class="filter-btn filter-actuve active" data-filter="all">
             <span class="text">All</span>
           </button>
           <button class="filter-btn" data-filter="web">
             <span class="text">Web</span>
           </button>
-          <!-- <button class="filter-btn" data-filter="app">
-            <span class="text">App</span>
-          </button> -->
+          <button class="filter-btn" data-filter="java">
+            <span class="text">Java</span>
+          </button>
+        </div> -->
+        <div class="section-title">
+          <h2>Projects</h2>
+          <!-- TODO: change this para -->
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p> -->
         </div>
-
         <div class="row" id="projectContainer">
           <!-- Projects will be dynamically added here -->
         </div>
@@ -711,6 +717,10 @@
                 </p>
               </div>
 
+              <p class="text-muted">
+                Have a project in mind? <br>Let's connect and create something amazing together 🎉
+              </p>
+
               <!-- <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
                 frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
@@ -749,6 +759,7 @@
                 <textarea placeholder="Your Message" class="form-control p-3" name="message" rows="10" required></textarea>
               </div>
               <button type="submit" class="btn-block subBtn">Submit Form</button>
+              <div id="emailHelp" class="form-text">* This form will be submitted through <a target="_blank" href="https://formsubmit.co/">formsubmit.co</a></div>
             </form>
           </div>
 
@@ -774,7 +785,7 @@
   <div id="FooterLinks"></div>
   <script src="assets/js/index.js"></script>
 
-  <script>
+  <!-- <script>
     var send = document.getElementById('sendMSg');
     send.addEventListener('click', function (e) {
       e.preventDefault()
@@ -796,7 +807,7 @@
         message => alert('Email Sent Successfully!')
       );
     })
-  </script>
+  </script> -->
 
   <script>
     $(window).on('load', function () {
