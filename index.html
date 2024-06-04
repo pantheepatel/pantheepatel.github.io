@@ -21,7 +21,9 @@
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
     </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+
     $(function () {
       $("#HeaderLinks").load("HeaderLinks.html");
       $("#FooterLinks").load("FooterLinks.html");
@@ -41,7 +43,8 @@
   <section id="hero" class="d-flex flex-column justify-content-center p-3 align-items-center">
     <div class="hero-container">
       <h1>Panthee Patel</h1>
-      <p style="line-height: 1.7;">I'm a <span class="typed" data-typed-items="Website Developer, Freelancer, Student"></span>
+      <p style="line-height: 1.7;">I'm a <span class="typed"
+          data-typed-items="Website Developer, Freelancer, Student"></span>
         <br>
         <span class="">Innovating the world with code.</span>
       </p>
@@ -52,7 +55,7 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about section-bg">
+    <section id="about" class="about">
       <div class="container">
 
         <div class="section-title">
@@ -218,7 +221,7 @@
     <!-- </div> -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills section-bg">
       <div class="container">
         <div class="row" id="skillsContainer">
         </div>
@@ -315,7 +318,7 @@
     <!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume section-bg">
+    <section id="resume" class="resume">
       <div class="container">
 
         <div class="section-title">
@@ -346,9 +349,7 @@
             <div class="resume-item">
               <h4>Bachelor of Computer Engineering</h4>
               <h5>2021 - 2025</h5>
-              <!-- TODO: add the link of college -->
               <p><em><a href="https://www.ljku.edu.in/">LJ University</a>, Ahmedabad, Gujarat</em></p>
-              <!-- TODO: change this para -->
               <ul>
                 <li>Throughout my college journey, I have had the opportunity to develop a strong foundation in
                   FrontEnd,
@@ -357,24 +358,22 @@
                   Cultural Event, where I honed my Soft Skills.</li>
               </ul>
             </div>
-            <!-- TODO: change this section -->
-            <!-- <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius
-                unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart
-                dila</p>
-            </div> -->
+            <div class="resume-item">
+              <h4>Secondary &amp; Higher Secondary School</h4>
+              <h5>2017 - 2021</h5>
+              <p><em>Karmachari Sikshan Tirth, Ahmedabad, Gujarat</em></p>
+              <p>I actively engaged in various extracurricular activities that helped me develop a diverse set of skills
+                such as creativity, effective communication, leadership, teamwork, critical thinking, problem-solving,
+                time management, etc. These experiences significantly enriched my personal development, instilling a
+                strong sense of determination and resilience.</p>
+            </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
               <h4>Web Developer Intern</h4>
               <h5>September 2022 - February 2024</h5>
-              <!-- TODO: add the link of location or website -->
-              <p><em><a href="https://www.humbeestudio.com/">Humbee Studios</a>, Ahmedabad, India </em></p>
-              <!-- TODO: change this section according to resume -->
+              <p><em><a href="https://www.humbeestudio.com/">Humbee Studios</a>, Ahmedabad, Gujarat </em></p>
               <h6>Project I have done in this organization</h6>
               <ul>
 
@@ -383,7 +382,7 @@
                   <span> - to collaborate on medical research projects</span>
                 </li>
                 <li>
-                  <a>Shankus Club</a>
+                  <a target="_blank" href="https://sclubshankus.com/index.html">Shankus Club</a>
                   <span> - SClub that offers all-inclusive leisure and entertainment and diverse range of
                     amenities</span>
                 </li>
@@ -400,36 +399,20 @@
                   iterations to customer.</li>
               </ul>
             </div>
-            <!-- TODO: change this section -->
-            <!-- <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and
-                  advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div> -->
           </div>
         </div>
         <div class="row align-content-center p-2" data-aos="fade-up">
           <button class="btn resume-btn justify-content-center" style="width:100%; display: flex;">
             <i class="bx bx-download bx-sm"></i>
-            <a href="https://drive.google.com/uc?export=download&id=1_WHJK7ZbLUqQJA6wD_cS-39niveBKfHA" download="PantheePatel">
+            <a href="https://drive.google.com/uc?export=download&id=1_WHJK7ZbLUqQJA6wD_cS-39niveBKfHA"
+              download="PantheePatel">
               Download
             </a>
           </button>
         </div>
-        <!-- TODO: add button to download the resume -->
-
       </div>
     </section>
-    <!-- End Resume Section -->
 
-    <!-- ======= Portfolio Section ======= -->
     <!-- TODO: make this section of projects. -->
     <!-- <section id="portfolio" class="portfolio section-bg">
       <div class="container">
@@ -465,7 +448,7 @@
 
       </div>
     </section> -->
-    <section id="portfolio">
+    <section id="portfolio" class="section-bg">
       <div class="container">
         <!-- <div class="filter">
           <button class="filter-btn filter-actuve active" data-filter="all">
@@ -491,7 +474,7 @@
       </div>
     </section>
     <!-- Bootstrap Modal for project details -->
-    <div class="modal fade modal-xl " id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
+    <div class="modal fade modal-xl" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -530,7 +513,20 @@
       </div>
     </div>
 
-    <!-- End Portfolio Section -->
+    <section id="certificateSlider">
+      <div class="container">
+        <div class="section-title">
+          <h2>Certificates</h2>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper" id="SwiperWrapper">
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </div>
+    </section>
 
     <!-- ======= Services Section ======= -->
     <!-- <section id="services" class="services">
@@ -678,7 +674,6 @@
     </section> -->
     <!-- End Testimonials Section -->
 
-    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container">
 
@@ -756,63 +751,77 @@
                 </div>
               </div>
               <div class="form-group my-2">
-                <textarea placeholder="Your Message" class="form-control p-3" name="message" rows="10" required></textarea>
+                <textarea placeholder="Your Message" class="form-control p-3" name="message" rows="10"
+                  required></textarea>
               </div>
               <button type="submit" class="btn-block subBtn">Submit Form</button>
-              <div id="emailHelp" class="form-text">* This form will be submitted through <a target="_blank" href="https://formsubmit.co/">formsubmit.co</a></div>
+              <div id="emailHelp" class="form-text">* This form will be submitted through <a target="_blank"
+                  href="https://formsubmit.co/">formsubmit.co</a></div>
             </form>
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
   </main>
-  <!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <!-- <footer id="footer">
+  <footer id="footer">
     <div class="container">
       <div class="copyright">
+        Made with ❤️ by <br><strong><span>Panthee Patel</span></strong>
       </div>
     </div>
-  </footer> -->
-  <!-- End  Footer -->
+  </footer>
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <div id="FooterLinks"></div>
   <script src="assets/js/index.js"></script>
 
-  <!-- <script>
-    var send = document.getElementById('sendMSg');
-    send.addEventListener('click', function (e) {
-      e.preventDefault()
-      console.log('hii')
-      var fullName = document.getElementById('fullName').value;
-      var email = document.getElementById('email').value;
-      var subject = document.getElementById('subject').value;
-      var mobile = document.getElementById('mobile').value;
-      var message = document.getElementById('message').value;
-      var body = 'Name : ' + fullName + '<br/>' + 'Mobile number : ' + mobile + '<br/>' + 'Message : ' + message
-      console.log('email ', email, ' subject : ', subject, ' body : ', body)
-      Email.send({
-        SecureToken: "1098a42e-b9e4-43a1-90f4-04461e5c2eb4",
-        To: "patel.panthee.18@gmail.com",
-        From: email,
-        Subject: subject,
-        Body: body
-      }).then(
-        message => alert('Email Sent Successfully!')
-      );
-    })
-  </script> -->
-
   <script>
     $(window).on('load', function () {
       $('#loading').hide();
     }) 
+  </script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      // autoHeight: false,
+      spaceBetween: 20,
+      freeMode: true,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
   </script>
 
 </body>

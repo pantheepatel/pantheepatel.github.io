@@ -421,3 +421,35 @@
 .subBtn:hover {
   background: #37b3ed;
 }
+
+.swiper {
+  width: 100%;
+  /* height: 600px; */
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* background: #eee; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cetrificateName{
+  margin: 1rem 0rem 0rem 0rem;
+  /* background-color: #1073a1; */
+  color: #1073a1;
+  width: 100%;
+}
+
+/* .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: -10;
+} */

@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     imagePath = "assets/image/"
+    certificatePath = "assets/certificates/CERTIFICATE_LANDING_PAGE~"
     // Array of skill objects
     const skills = [
         { image: 'HTML', name: 'HTML' },
@@ -169,33 +170,61 @@ document.addEventListener('DOMContentLoaded', function () {
         { image: 'Jango', name: 'Django' },
     ];
 
+    const certificates = [
+        { image: 'AA4676G4KETK', name: 'App Engine: Qwik Start - Java' },
+        { image: 'D88X653XDEDY', name: 'The Structured Query Language (SQL)' },
+        { image: 'RVRSGB7G7H6L', name: 'Version Control' },
+        { image: 'DAKXKZMFBJU3', name: 'Linux Fundamentals' },
+        { image: 'FX4WA85RWY47', name: 'C for Everyone: Programming Fundamentals' },
+        { image: 'E65BJ9P4XF88', name: 'What is Data Science?' },
+        { image: 'MP4WLMEQW3GK', name: 'Exploratory Data Analysis for Machine Learning' },
+        { image: 'C87R8HVLJMGL', name: 'Data Structures' },
+        { image: 'PRKK85ZPJEPH', name: 'Algorithmic Thinking (Part 1)' },
+        { image: 'YRQKWPZYUQSJ', name: 'Algorithmic Thinking (Part 2)' },
+        { image: 'QYR3X568PJNP', name: 'Introduction to HTML5' },
+        { image: '77YM94UETPD5', name: 'Introduction to CSS3' },
+        { image: 'FX3CRG66CJ5D', name: 'Interactivity with JavaScript' },
+        { image: 'F2NF4YJY8KCZ', name: 'Introduction to Web Development' },
+        { image: 'HTPFZPBQ723X', name: 'HTML, CSS, and Javascript for Web Developers' },
+        { image: 'TJ4WBRWTXFU9', name: 'Advance Styling with Responsive Design' },
+    ]
+
     // Get the container to append skills
     const skillsContainer = document.getElementById('skillsContainer');
+    const swiperWrapper = document.getElementById('SwiperWrapper');
 
-    // Function to generate skill cards
     function generateSkillCards() {
         skills.forEach(skill => {
-            // Create card div
             const cardDiv = document.createElement('div');
-            cardDiv.classList.add('col-6', 'col-sm-4', 'col-md-3', 'col-lg-2', 'mb-4'); // Bootstrap column and margin
-
-            // Create skill card content
+            cardDiv.classList.add('col-6', 'col-sm-4', 'col-md-3', 'col-lg-2', 'mb-4');
             const cardContent = `
                 <div class="skill-card">
                     <img src="${imagePath}${skill.image}.png" alt="${skill.name}">
                     <div class="skill-name">${skill.name}</div>
                 </div>
             `;
-
-            // Set innerHTML of cardDiv
             cardDiv.innerHTML = cardContent;
-
-            // Append cardDiv to skillsContainer
             skillsContainer.appendChild(cardDiv);
+        });
+    }
+    function generateCertificates() {
+        console.log("certificates");
+        certificates.forEach(certificate => {
+            console.log(certificate);
+            const slideDiv = document.createElement('div');
+            slideDiv.classList.add('swiper-slide');
+            const slideContent = `
+                <img src="${certificatePath}${certificate.image}.jpeg" alt="${certificate.name}">
+                <span class="cetrificateName">${certificate.name}</span>
+            `;
+            console.log(slideContent);
+            slideDiv.innerHTML = slideContent;
+            swiperWrapper.appendChild(slideDiv);
         });
     }
 
     // Generate skill cards
     generateSkillCards();
-});
+    generateCertificates();
 
+});
