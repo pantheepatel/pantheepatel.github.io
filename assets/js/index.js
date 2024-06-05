@@ -187,6 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { image: 'F2NF4YJY8KCZ', name: 'Introduction to Web Development' },
         { image: 'HTPFZPBQ723X', name: 'HTML, CSS, and Javascript for Web Developers' },
         { image: 'TJ4WBRWTXFU9', name: 'Advance Styling with Responsive Design' },
+        { image: 'UDEMY1', name: 'Logo Design Essentials' },
     ]
 
     // Get the container to append skills
@@ -210,21 +211,56 @@ document.addEventListener('DOMContentLoaded', function () {
     function generateCertificates() {
         console.log("certificates");
         certificates.forEach(certificate => {
-            console.log(certificate);
             const slideDiv = document.createElement('div');
             slideDiv.classList.add('swiper-slide');
             const slideContent = `
-                <img src="${certificatePath}${certificate.image}.jpeg" alt="${certificate.name}">
+                <img src="${certificatePath}${certificate.image}.jpeg" alt="${certificate.name}" class="certificate-img">
                 <span class="cetrificateName">${certificate.name}</span>
             `;
-            console.log(slideContent);
             slideDiv.innerHTML = slideContent;
             swiperWrapper.appendChild(slideDiv);
         });
+        const certificateCards = document.querySelectorAll('.certificate-img');
+        certificateCards.forEach(card => {
+            card.addEventListener('click', function () {
+                document.querySelector('.modal-title').textContent = card.alt;
+                document.getElementById('certiModalImage').src = card.src;
+                document.getElementById('certiName').innerText = card.alt;
+                $('#certificateModal').modal('show');
+            });
+        });
     }
+    // Event listener for the close button within the modal
+    $('.close-btn').on('click', function () {
+        $('#certificateModal').modal('hide');
+    });
+
 
     // Generate skill cards
     generateSkillCards();
     generateCertificates();
+
+    // const certificateCards = document.querySelectorAll('.swiper-slide img');
+    // certificateCards.forEach(card => {
+    //     card.addEventListener('click', function () {
+    //         console.log("clicked", card.src);
+    //         document.querySelector('.modal-title').textContent = card.alt;
+    //         document.getElementById('certiModalImage').src = card.src;
+    //     });
+    // });
+    // const fullPage = document.getElementById('fullPage');
+    // certificateCards.forEach(card => {
+    //     card.addEventListener('click', function () {
+    //         console.log("clicked", card.src);
+    //         const div = document.createElement('div');
+    //         div.classList.add('modal');
+    //         const modalContent = `
+    //             <img src="${card.src}" alt="${card.alt}">
+    //         `;
+    //         div.innerHTML = modalContent;
+    //         fullPage.appendChild(div);
+    //         console.log("appended", fullPage);
+    //     });
+    // });
 
 });
