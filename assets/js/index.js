@@ -158,16 +158,20 @@ document.addEventListener('DOMContentLoaded', function () {
     certificatePath = "assets/certificates/CERTIFICATE_LANDING_PAGE~"
     // Array of skill objects
     const skills = [
-        { image: 'HTML', name: 'HTML' },
-        { image: 'CSS', name: 'CSS' },
+        { image: 'C', name: 'C' },
+        { image: 'Java', name: 'Java' },
+        { image: 'Python', name: 'Python' },
         { image: 'JS', name: 'Java Script' },
-        { image: 'Bootstrap', name: 'Bootstrap' },
-        { image: 'TailwindCSS', name: 'Tailwind CSS' },
         { image: 'AngularJS', name: 'Angular JS' },
         { image: 'ReactJS', name: 'React JS' },
         { image: 'ReactNative', name: 'React Native' },
-        { image: 'Python', name: 'Python' },
+        { image: 'HTML', name: 'HTML' },
+        { image: 'CSS', name: 'CSS' },
+        { image: 'Bootstrap', name: 'Bootstrap' },
+        { image: 'TailwindCSS', name: 'Tailwind CSS' },
         { image: 'Jango', name: 'Django' },
+        { image: 'GitHub', name: 'GitHub' },
+
     ];
 
     const certificates = [
