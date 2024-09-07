@@ -5,41 +5,63 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalImage = document.getElementById('modalImage');
     const modalDescription = document.getElementById('modalDescription');
 
-    // Sample projects array
     const projects = [
         {
             name: 'PlantHub',
             image: 'assets/project_images/web_p1/plantHub-1.png',
             description: 'PlantHub is a comprehensive platform designed for plant enthusiasts, offering a wealth of information about various plants and trees. Built with a user-centric approach, PlantHub aims to educate, engage, and inspire individuals interested in plants and nature.',
             gitHubLink: 'https://github.com/pantheepatel/PlantHub.github.io',
-            replLink:'',
+            replLink: '',
             features: ['Searching', 'Filtering', 'Like-Unlike', 'Pagination', 'login-logout'],
             skills: ['React JS', 'Tailwind CSS', 'DJango'],
-            type: 'web',
+            type: 'web1',
             images: ['assets/project_images/web_p1/plantHub-1.png', 'assets/project_images/web_p1/plantHub-2.png', 'assets/project_images/web_p1/plantHub-3.png',]
+        },
+        {
+            name: 'NEWS-APP',
+            image: 'assets/project_images/py_p1/news_1.png',
+            description: 'Built a dynamic news app in Python, leveraging Beautiful Soup for data scraping to generate news across all topics. The app also offers an advanced feature using the Google NEWS library, where users can specify a particular topic, select whether to include article links, and customize the number of news articles displayed, providing a tailored and flexible news-gathering experience.',
+            gitHubLink: '',
+            replLink: 'https://replit.com/@PantheePatel1/NEWSGenerator',
+            features: ['Topic Search', 'Custom Article Count', 'Include/Exclude Links', 'All/Specific Topic News', 'Real-time Updates'],
+            skills: ['Python', 'GoogleNews', 'Data Scrapping with Beautiful Soup'],
+            type: 'py1',
+            images: ['assets/project_images/py_p1/news_1.png', 'assets/project_images/py_p1/news_2.png', 'assets/project_images/py_p1/news_3.png',]
+        },
+        {
+            name: 'Hospital Management System',
+            image: 'assets/project_images/c_p1/HospitalManage_1.png',
+            description: 'Developed a C language program in my 1st semester that enabled admin and users to manage patient data, including adding, updating, viewing, and deleting records. The program also featured billing functionality and a help option for guidance.',
+            gitHubLink: '',
+            replLink: 'https://replit.com/@PantheePatel1/HospitalManagement',
+            features: ['Patient Details', 'Add New Patient', 'Delete Patient', 'Update Patient Details', 'Check Billing', 'Update Billing'],
+            skills: ['C'],
+            type: 'c1',
+            images: ['assets/project_images/c_p1/HospitalManage_1.png', 'assets/project_images/c_p1/HospitalManage_2.png', 'assets/project_images/c_p1/HospitalManage_3.png',]
+        },
+        {
+            name: 'Sudoku Solver',
+            image: 'assets/project_images/c_p2/sudoku_1.png',
+            description: 'lorem ipsum',
+            gitHubLink: '',
+            replLink: 'https://replit.com/@PantheePatel1/SudokuSolvver',
+            features: [],
+            skills: ['C', 'DSA'],
+            type: 'c2',
+            images: ['assets/project_images/c_p2/sudoku_1.png']
         },
         {
             name: 'TriviaTrek',
             image: 'assets/project_images/java_p1/TriviaTrek_1.png',
-            description: ' Through this project, I delved into fundamental Java concepts, including object-oriented programming, file handling, and user authentication. As I developed TriviaTrek, I learned the importance of efficient data management and user interaction in creating engaging applications.',
+            description: 'Through this project, I delved into fundamental Java concepts, including object-oriented programming, file handling, and user authentication. As I developed TriviaTrek, I learned the importance of efficient data management and user interaction in creating engaging applications.',
             gitHubLink: 'https://github.com/pantheepatel/TriviaTrek',
-            replLink:'',
+            replLink: '',
             features: ['Registration', 'Login', 'Quiz', 'Highscore Updation'],
             skills: ['JAVA'],
-            type: 'java',
+            type: 'java1',
             images: ['assets/project_images/java_p1/TriviaTrek_1.png', 'assets/project_images/java_p1/TriviaTrek_2.png', 'assets/project_images/java_p1/TriviaTrek_3.png',]
         },
-        {
-            name: 'Hospital Management System',
-            image: 'assets/project_images/java_p1/TriviaTrek_1.png',
-            description: ' Through this project, I delved into fundamental Java concepts, including object-oriented programming, file handling, and user authentication. As I developed TriviaTrek, I learned the importance of efficient data management and user interaction in creating engaging applications.',
-            gitHubLink: '',
-            replLink:'https://replit.com/@PantheePatel1/HospitalManagement',
-            features: ['Registration', 'Login', 'Quiz', 'Highscore Updation'],
-            skills: ['JAVA'],
-            type: 'java',
-            images: ['assets/project_images/java_p1/TriviaTrek_1.png', 'assets/project_images/java_p1/TriviaTrek_2.png', 'assets/project_images/java_p1/TriviaTrek_3.png',]
-        }
+
     ];
 
     // Function to generate project cards
@@ -47,9 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
         let html = '';
         projects.forEach(project => {
             html += `
-            <div class="col-md-4 card d-flex justify-content-center " data-category="${project.type}">
-                <img src="${project.image}" alt="${project.name}" class="project-image" data-description="${project.description}">
-            </div>
+                <div class="col-4">
+                    <div class="card d-flex justify-content-center" data-category="${project.type}">
+                        <img src="${project.image}" alt="${project.name}" class="project-image" data-description="${project.description}">
+                    </div>
+                    <div class="text-center cetrificateName">${project.name}</div>
+                </div>
             `;
         });
         projectContainer.innerHTML = html;
@@ -73,6 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('modalDescription').textContent = selectedProject.description;
             document.getElementById('gitHubLink').href = selectedProject.gitHubLink;
             document.getElementById('gitHubLink').innerText = selectedProject.gitHubLink;
+            document.getElementById('replLink').href = selectedProject.replLink;
+            document.getElementById('replLink').innerText = selectedProject.replLink;
 
             const carouselInner = document.getElementById('carouselInner');
             const prevBtn = document.getElementById('carouselControlPrev').addEventListener('click', function () {
