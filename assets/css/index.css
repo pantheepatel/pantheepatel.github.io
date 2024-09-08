@@ -273,10 +273,10 @@
   transform: scale(1.05);
 }
 
-.project-image {
+/* .project-image {
   max-width: 100%;
   height: auto;
-}
+} */
 
 .modal-content {
   position: relative;
@@ -597,4 +597,30 @@
   padding: 8px 20px;
   color: white;
   border: 0;
+}
+
+.short{
+  grid-row: span 2;
+}
+
+.long{
+  grid-row: span 3;
+}
+
+#projectContainer{ 
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 1024px){
+  #projectContainer{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px){
+  #projectContainer{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

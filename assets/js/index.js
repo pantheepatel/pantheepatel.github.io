@@ -15,7 +15,20 @@ document.addEventListener('DOMContentLoaded', function () {
             features: ['Searching', 'Filtering', 'Like-Unlike', 'Pagination', 'login-logout'],
             skills: ['React JS', 'Tailwind CSS', 'DJango'],
             type: 'web1',
+            addClass: 'short',
             images: ['assets/project_images/web_p1/plantHub-1.png', 'assets/project_images/web_p1/plantHub-2.png', 'assets/project_images/web_p1/plantHub-3.png',]
+        },
+        {
+            name: 'TriviaTrek',
+            image: 'assets/project_images/java_p1/TriviaTrek_1.png',
+            description: 'Through this project, I delved into fundamental Java concepts, including object-oriented programming, file handling, and user authentication. As I developed TriviaTrek, I learned the importance of efficient data management and user interaction in creating engaging applications.',
+            gitHubLink: 'https://github.com/pantheepatel/TriviaTrek',
+            replLink: '',
+            features: ['Registration', 'Login', 'Quiz', 'Highscore Updation'],
+            skills: ['JAVA', 'OOPs', 'File Handling'],
+            type: 'java1',
+            addClass: 'long',
+            images: ['assets/project_images/java_p1/TriviaTrek_1.png', 'assets/project_images/java_p1/TriviaTrek_2.png', 'assets/project_images/java_p1/TriviaTrek_3.png',]
         },
         {
             name: 'NEWS-APP',
@@ -26,7 +39,20 @@ document.addEventListener('DOMContentLoaded', function () {
             features: ['Topic Search', 'Custom Article Count', 'Include/Exclude Links', 'All/Specific Topic News', 'Real-time Updates'],
             skills: ['Python', 'GoogleNews', 'Data Scrapping with Beautiful Soup'],
             type: 'py1',
+            addClass: 'short',
             images: ['assets/project_images/py_p1/news_1.png', 'assets/project_images/py_p1/news_2.png', 'assets/project_images/py_p1/news_3.png',]
+        },
+        {
+            name: 'Calculator',
+            image: 'assets/project_images/app_p1/calculator_1.png',
+            description: 'My first React Native app, a simple calculator that performs basic arithmetic operations. App is available on 2 themes: Light and Dark.',
+            gitHubLink: 'https://github.com/pantheepatel/calculator-app',
+            replLink: '',
+            features: [],
+            skills: ['React Native', 'JavaScript', 'NativeWind'],
+            type: 'app1',
+            addClass: 'long',
+            images: ['assets/project_images/app_p1/calculator_1.png', 'assets/project_images/app_p1/calculator_2.png', 'assets/project_images/app_p1/calculator_3.png']
         },
         {
             name: 'Hospital Management System',
@@ -37,31 +63,21 @@ document.addEventListener('DOMContentLoaded', function () {
             features: ['Patient Details', 'Add New Patient', 'Delete Patient', 'Update Patient Details', 'Check Billing', 'Update Billing'],
             skills: ['C'],
             type: 'c1',
+            addClass: 'short',
             images: ['assets/project_images/c_p1/HospitalManage_1.png', 'assets/project_images/c_p1/HospitalManage_2.png', 'assets/project_images/c_p1/HospitalManage_3.png',]
         },
         {
             name: 'Sudoku Solver',
             image: 'assets/project_images/c_p2/sudoku_1.png',
-            description: 'lorem ipsum',
+            description: 'This program developed in C language used to solve Sudoku puzzles using backtracking algorithm to find the solution to any given Sudoku puzzle. The project helped me understand the importance of algorithmic thinking and problem-solving in programming.',
             gitHubLink: '',
             replLink: 'https://replit.com/@PantheePatel1/SudokuSolvver',
             features: [],
             skills: ['C', 'DSA'],
             type: 'c2',
+            addClass: 'short',
             images: ['assets/project_images/c_p2/sudoku_1.png']
         },
-        {
-            name: 'TriviaTrek',
-            image: 'assets/project_images/java_p1/TriviaTrek_1.png',
-            description: 'Through this project, I delved into fundamental Java concepts, including object-oriented programming, file handling, and user authentication. As I developed TriviaTrek, I learned the importance of efficient data management and user interaction in creating engaging applications.',
-            gitHubLink: 'https://github.com/pantheepatel/TriviaTrek',
-            replLink: '',
-            features: ['Registration', 'Login', 'Quiz', 'Highscore Updation'],
-            skills: ['JAVA'],
-            type: 'java1',
-            images: ['assets/project_images/java_p1/TriviaTrek_1.png', 'assets/project_images/java_p1/TriviaTrek_2.png', 'assets/project_images/java_p1/TriviaTrek_3.png',]
-        },
-
     ];
 
     // Function to generate project cards
@@ -69,12 +85,28 @@ document.addEventListener('DOMContentLoaded', function () {
         let html = '';
         projects.forEach(project => {
             html += `
-                <div class="col-4">
-                    <div class="card d-flex justify-content-center" data-category="${project.type}">
-                        <img src="${project.image}" alt="${project.name}" class="project-image" data-description="${project.description}">
+                    <div style="
+                    overflow: hidden;
+                    "
+                    class=" ${project.addClass}">
+                        <div class="card d-flex justify-content-center" data-category="${project.type}">
+                            <img src="${project.image}" alt="${project.name}" data-description="${project.description}"
+                            style="
+                            min-width: 100%;
+                            max-height: 100%; 
+                            object-fit: contain;
+                            ">
+                        </div>
+                        <div style="
+                        display: flex;
+                        justify-content: space-between;
+                        width: 85%;
+                        margin: auto;
+                        ">
+                            <span style="font-size: large;">${project.name}</span>
+                            <span style="color: #008cba; font-weight: bold; font-size: large;">${project.skills[0]}</span>
+                        </div>
                     </div>
-                    <div class="text-center cetrificateName">${project.name}</div>
-                </div>
             `;
         });
         projectContainer.innerHTML = html;
@@ -132,12 +164,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 // const itemClass = index === 0 ? 'carousel-item active' : 'carousel-item';
                 const carouselItem = document.createElement('div');
-                carouselItem.classList = itemClass;
+                carouselItem.classList = itemClass + ' w-100 h-100';
 
                 const imageElement = document.createElement('img');
                 imageElement.src = image;
                 imageElement.alt = `${selectedProject.name} Image ${index + 1}`;
-                imageElement.classList = 'd-block w-100 bg-success';
+                imageElement.style = 'max-height:25rem';
+                imageElement.classList = 'object-contain m-auto d-flex';
 
                 carouselItem.appendChild(imageElement);
                 carouselInner.appendChild(carouselItem);
