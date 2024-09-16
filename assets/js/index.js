@@ -85,10 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let html = '';
         projects.forEach(project => {
             html += `
-                    <div style="
-                    overflow: hidden;
-                    "
-                    class=" ${project.addClass}">
+                    <div style="overflow: hidden;" class=" ${project.addClass}">
                         <div class="card d-flex justify-content-center" data-category="${project.type}">
                             <img src="${project.image}" alt="${project.name}" data-description="${project.description}"
                             style="
@@ -98,13 +95,16 @@ document.addEventListener('DOMContentLoaded', function () {
                             ">
                         </div>
                         <div style="
-                        display: flex;
-                        justify-content: space-between;
-                        width: 85%;
-                        margin: auto;
-                        ">
-                            <span style="font-size: large;">${project.name}</span>
-                            <span style="color: #008cba; font-weight: bold; font-size: large;">${project.skills[0]}</span>
+                            display: flex;
+                            justify-content: space-between;
+                            width: 85%;
+                            margin: auto;
+                            align-items: center;
+                            ">
+                                <span style="font-size: large;">${project.name}</span>
+                                <span style="color: #008cba; font-weight: bold; font-size: large;">${project.skills[0]}</span>
+                                ${project.gitHubLink?`<a target="_blank" href="${project.gitHubLink}" class="projectLinks"><i class="bi bi-github"></i></a>`:
+                                    `<a target="_blank" href="${project.replLink}"><img src="assets/image/New_Replit_Logo.svg.png" class="projectLinks"></a>`}
                         </div>
                     </div>
             `;
