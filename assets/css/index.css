@@ -320,6 +320,9 @@
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .skill-card:hover {
@@ -332,6 +335,7 @@
 .skill-card img {
   width: 100%;
   height: auto;
+  margin: auto;
 }
 
 .skill-name {
@@ -341,6 +345,7 @@
   color: white;
   font-size: large;
   font-weight: bold;
+  margin-top: auto;
   /* visibility: hidden; */
 }
 

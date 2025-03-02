@@ -266,7 +266,11 @@ document.addEventListener('DOMContentLoaded', function () {
         { image: 'TailwindCSS', name: 'Tailwind CSS' },
         { image: 'Jango', name: 'Django' },
         { image: 'GitHub', name: 'GitHub' },
-
+        { image: 'Git', name: 'Git' },
+        { image: 'typescript', name: 'TypeScript' },
+        { image: 'csharp', name: 'C#' },
+        { image: 'netMVC', name: '.NET MVC' },
+        { image: 'netCore', name: '.NET Core' }
     ];
 
     const certificates = [
