@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 4. change photo - my -->
 <!-- 5. add visitors count -->
 <!-- 7. solve the issue of enlarged photo in certificate -->
 
@@ -47,7 +46,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center p-3 align-items-center">
     <div class="hero-container">
       <h1>Panthee Patel</h1>
-      <p style="line-height: 1.7;">I'm a <span class="typed" data-typed-items="Software Engineer, Student"></span>
+      <p style="line-height: 1.7;">I'm a <span class="typed" data-typed-items="Software Engineer"></span>
         <br>
         <span class="">Innovating the world with code 👩🏻‍💻</span>
         <br>
@@ -70,9 +69,8 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>Hey, I'm Panthee, a computer engineering student diving into tech.Turning designs and ideas into functional
-            websites and apps. I'm all about merging art with logic, and I embrace the learning journey. Let's connect
-            and collaborate on this tech adventure!</p>
+          <p>Hey, I'm Panthee, a Backend Software Developer at Simform. 
+            Passionate about clean code, problem-solving, and the art of turning complex logic into simple, impactful solutions.</p>
         </div>
 
         <div class="row">
@@ -81,7 +79,7 @@
             <img src="assets/image/myPhoto2.jpg" class="img-fluid" alt="">
           </div> -->
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3 class="pb-2">Student &amp; Developer.</h3>
+            <h3 class="pb-2">A Software Developer.</h3>
             <!-- <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore
@@ -90,11 +88,11 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-dash-lg"></i> <strong>Birthday:</strong> <span>18 August 2004</span></li>
+                  <!-- <li><i class="bi bi-dash-lg"></i> <strong>Birthday:</strong> <span>18 August 2004</span></li> -->
                   <!-- TODO: change website here -->
 
                   <li><i class="bi bi-dash-lg"></i> <strong>Degree:</strong> <span>Bachelors in Engineering</span></li>
-                  <li><i class="bi bi-dash-lg"></i> <strong>City:</strong> <span>Ahmedabad, Gujarat</span></li>
+                  <li><i class="bi bi-dash-lg"></i> <strong>Location:</strong> <span>Ahmedabad, Gujarat, India</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -112,9 +110,9 @@
                       <span>patel.panthee.18&#64;gmail.com</span>
                     </li>
                   </a>
-                  <a href="tel:+917575860820" class="noColor">
+                  <!-- <a href="tel:+917575860820" class="noColor">
                     <li><i class="bi bi-dash-lg"></i> <strong>Phone:</strong> <span>+91 75758 60820</span></li>
-                  </a>
+                  </a> -->
                   <!-- <li><i class="bi bi-dash-lg"></i> <strong>Freelance:</strong> <span>Available</span></li> -->
                 </ul>
               </div>
@@ -384,38 +382,11 @@
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Trainee Engineer</h4>
-              <h5>January 2025 - Current</h5>
-              <p><em><a href="https://www.simform.com/" target="_blank">Simform solutions</a>, Ahmedabad, Gujarat </em>
-              </p>
-              <!-- <h6>Skills I am learning</h6> -->
-              <ul>
-                <li>As an intern, I am honing my skills in .NET and Angular, focusing on developing scalable web
-                  applications while following industry best practices.</li>
-                <li>Working on hands-on projects, debugging, optimizing performance, and implementing efficient coding
-                  solutions to meet business needs.</li>
-                <li>Participating in daily sync-ups, mentor evaluations, and supervisor interviews to enhance technical
-                  proficiency.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Web Developer Intern</h4>
-              <h5>September 2022 - February 2024</h5>
-              <p><em><a href="https://www.humbeestudio.com/" target="_blank">Humbee Studios</a>, Ahmedabad, Gujarat
-                </em></p>
-              <!-- <h6>Skills I have learnt</h6> -->
-              <ul>
-                <li>As a versatile professional, I have honed my skills in web development, testing, project management,
-                  and social media management to deliver exceptional results in a dynamic and ever-evolving digital
-                  landscape.</li>
-                <li>Teamed on user-centric design strategy in translation of UX
-                  and business requirements into coded solutions.
-                </li>
-                <li>Tested web-based product functionality and delivered
-                  iterations to customer.</li>
-              </ul>
-            </div>
+            <div id="experienceContainer"></div>
+            <button id="expandExperienceBtn" class="btn btn-link">
+              <span id="expandText"><em><a>Show More</a></em></span>
+              <i id="expandIcon" class="bx bx-chevron-down bx-sm"></i>
+            </button>
           </div>
         </div>
         <div class="row align-content-center p-2" data-aos="fade-up">
@@ -818,6 +789,7 @@
 
   <div id="FooterLinks"></div>
   <script src="assets/js/index.js"></script>
+  <script src="assets/js/experience.js"></script>
 
   <script>
     $(window).on('load', function () {
